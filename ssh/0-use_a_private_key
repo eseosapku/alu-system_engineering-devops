@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # ssh connects to your server using the private key
 
-ssh-add ~/.ssh/school:
+ssh-add -i ~/.ssh/school
