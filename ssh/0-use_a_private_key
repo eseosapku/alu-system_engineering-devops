@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-ssh-add ~/.ssh/id_rsa:
+# ssh connects to your server using the private key
+
+ssh-add ~/.ssh/school:
