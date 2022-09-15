@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ssh 4968-web-01@34.228.42.118
