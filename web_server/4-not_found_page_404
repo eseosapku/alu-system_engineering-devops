@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
-# script to install nginx
-
+# Configures NGINX
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
-REDIRECT_301="\\\trewrite ^/redirect_me https://www.nationalgeographic.com/animals/mammals/facts/domestic-dog permanent;"
-sudo sed -i "41i $REDIRECT_301" /etc/nginx/sites-available/default
-REDIRECT_404="\\\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}\n"
-sudo sed -i "44i $REDIRECT_404" /etc/nginx/sites-available/default
+sudo service nginx start
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+newlines="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
+sudo sed -i "55i $newlines" /etc/nginx/sites-available/default
 sudo service nginx restart
 sudo service nginx reload
