@@ -5,3 +5,4 @@ sudo apt-get install -f
 sudo apt-get install apache2
 sudo systemctl start apache2
 echo "Hello Holberton" | sudo tee /var/www/html/index.html
+sudo systemctl reload apache2
