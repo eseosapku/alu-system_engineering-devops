@@ -4,3 +4,10 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -f
 sudo apt-get install nginx
+sudo ufw enable
+sudo iptables -L
+sudo ufw allow 22/tcp
+sudo ufw allow ssh
+sudo ufw allow 'Nginx HTTP'
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx
