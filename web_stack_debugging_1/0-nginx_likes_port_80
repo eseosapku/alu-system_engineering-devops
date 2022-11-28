@@ -3,3 +3,4 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -f
 sudo apt-get install nginx
+#Nginx is running, and listening on port 80 of all the servers active IPv4 IPs
