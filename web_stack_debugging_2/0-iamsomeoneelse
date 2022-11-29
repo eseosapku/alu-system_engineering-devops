@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-user = $1
+whoami $1
