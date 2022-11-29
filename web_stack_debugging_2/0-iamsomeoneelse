@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-whoami "$1"
+if [[ "$(whoami)" != 'syslog' ]]
+then
+echo $1
+fi
