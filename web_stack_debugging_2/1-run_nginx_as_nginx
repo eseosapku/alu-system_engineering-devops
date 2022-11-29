@@ -4,7 +4,7 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -f
 sudo apt-get install nginx
-echo "user nginx"  | sudo tee/etc/nginx/nginx.conf
+echo "nginx"  | sudo ps aux| grep nginx| awk '{print $1}'
 sudo ufw enable
 sudo iptables -L
 sudo ufw allow 22/tcp
