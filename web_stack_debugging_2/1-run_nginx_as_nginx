@@ -4,7 +4,7 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -f
 sudo apt-get install nginx
-sudo chown -R <non-root-user>:<optional group> /etc/nginx/ /var/log/nginx/ /var/cache/nginx/
+sudo chown -R <non-root-user>:<optional group> /etc/nginx/ 
 sudo ufw enable
 sudo iptables -L
 sudo ufw allow 22/tcp
