@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 if [[ "$(whoami)" != 'syslog' ]]
 then
-echo $1
+echo "$1"
 fi
